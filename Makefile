@@ -1,21 +1,49 @@
-################################################################################
-#
-#      Copyright (C) 2017 by Intel Corporation, All Rights Reserved.
-#
-# 								           Global Makefile. 
-#	  		See lib/Makefile and tests/Makefile for further configuration.
-#
-################################################################################
-include config.mk
+# ------------------------------------------------
+# @author Adrian Szczepanski
+# @date 06-03-2022
+# ------------------------------------------------
 
-all:
-	$(MAKE) -C lib
-ifeq ($(ENABLE_TESTS),true)
-	$(MAKE) -C tests
-endif
+# platform
+export PLATFORM := Pc32
 
-clean:
-	$(MAKE) -C lib clean
-	$(MAKE) -C tests clean
-	$(RM) *~
+# project
+export project_name := tinycrypt
 
+# sysroot (for cross-compilation)
+# export sysroot := 
+
+# Directories
+project_dir := .
+make_dir := $(project_dir)/make
+
+# Documentation directory
+export docs_dir := docs
+
+# External libraries
+external_names = \
+CppUTest \
+
+external_build_options = \
+
+# Project internal libraries
+internal_library_names = \
+
+# Project subprograms
+program_names = \
+
+# Project libraries
+library_names = \
+tinycrypt \
+
+# optimalization flags
+# export debug_optimalization := 
+# export release_optimalization := 
+
+# Append rest of Makefile from template
+include $(make_dir)/Main.mk
+
+# Enter the internal library or program dependencies (by directory name)
+# 	E.g.: if libproject-a depends on libproject-b write the line above:
+#	libproject-a: libproject-b
+
+# Custom targets

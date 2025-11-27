@@ -42,7 +42,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define PRINT_DATA(fmt, ...) printf(fmt, ##__VA_ARGS__)
+#define PRINT_DATA(fmt, ...) 
 
 #define PRINT_LINE                                                     \
 	PRINT_DATA(                                                        \
@@ -100,8 +100,8 @@ static inline void fatal(unsigned int testnum, const void *expected, size_t expe
 {
 
         TC_ERROR("\tTest #%d Failed!\n", testnum);
-        show_str("\t\tExpected", expected, expectedlen);
-        show_str("\t\tComputed  ", computed, computedlen);
+        show_str("\t\tExpected", (const uint8_t *)expected, expectedlen);
+        show_str("\t\tComputed  ", (const uint8_t *)computed, computedlen);
         TC_PRINT("\n");
 }
 

@@ -1,5 +1,4 @@
-*.o
-*~
-*.d
-*.exe
-*.a
+build
+bin
+lib
+test

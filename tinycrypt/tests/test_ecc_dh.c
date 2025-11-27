@@ -477,45 +477,79 @@ int montecarlo_ecdh(int num_tests, bool verbose)
         return result;
 }
 
-int main()
+#include <CppUTest/TestHarness_c.h>
+
+static bool isInitalized = false;
+static bool verbose = false;
+
+TEST_GROUP_C_SETUP(EccDhTest)
 {
-        unsigned int result = TC_PASS;
+    if (!isInitalized) 
+    {
+        uECC_set_rng(&default_CSPRNG);
+        isInitalized = true;
+    }
+} 
 
-	TC_START("Performing ECC-DH tests:");
-
-	/* Setup of the Cryptographically Secure PRNG. */
-	uECC_set_rng(&default_CSPRNG);
-
-	bool verbose = true;
-
-	TC_PRINT("Performing cavp_ecdh test:\n");
-	result = cavp_ecdh(verbose);
-        if (result == TC_FAIL) { /* terminate test */
-                TC_ERROR("cavp_ecdh test failed.\n");
-                goto exitTest;
-        }
-	TC_PRINT("Performing cavp_keygen test:\n");
-	result = cavp_keygen(verbose);
-        if (result == TC_FAIL) { /* terminate test */
-                TC_ERROR("cavp_keygen test failed.\n");
-                goto exitTest;
-        }
-	TC_PRINT("Performing cavp_pkv test:\n");
-	result = cavp_pkv(verbose);
-        if (result == TC_FAIL) { /* terminate test */
-                TC_ERROR("cavp_pkv failed.\n");
-                goto exitTest;
-        }
-	TC_PRINT("Performing montecarlo_ecdh test:\n");
-	result = montecarlo_ecdh(10, verbose);
-        if (result == TC_FAIL) { /* terminate test */
-                TC_ERROR("montecarlo_ecdh test failed.\n");
-                goto exitTest;
-        }
-
-        TC_PRINT("All EC-DH tests succeeded!\n");
-
- exitTest:
-        TC_END_RESULT(result);
-        TC_END_REPORT(result);
+TEST_C(EccDhTest, cavp_ecdh)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, cavp_ecdh(verbose));
 }
+
+TEST_C(EccDhTest, cavp_keygen)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, cavp_keygen(verbose));
+}
+
+TEST_C(EccDhTest, cavp_pkv)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, cavp_pkv(verbose));
+}
+
+TEST_C(EccDhTest, montecarlo_ecdh)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, montecarlo_ecdh(10, verbose));
+}
+
+// int main()
+// {
+//         unsigned int result = TC_PASS;
+
+// 	TC_START("Performing ECC-DH tests:");
+
+// 	/* Setup of the Cryptographically Secure PRNG. */
+// 	uECC_set_rng(&default_CSPRNG);
+
+// 	bool verbose = true;
+
+// 	TC_PRINT("Performing cavp_ecdh test:\n");
+// 	result = cavp_ecdh(verbose);
+//         if (result == TC_FAIL) { /* terminate test */
+//                 TC_ERROR("cavp_ecdh test failed.\n");
+//                 goto exitTest;
+//         }
+// 	TC_PRINT("Performing cavp_keygen test:\n");
+// 	result = cavp_keygen(verbose);
+//         if (result == TC_FAIL) { /* terminate test */
+//                 TC_ERROR("cavp_keygen test failed.\n");
+//                 goto exitTest;
+//         }
+// 	TC_PRINT("Performing cavp_pkv test:\n");
+// 	result = cavp_pkv(verbose);
+//         if (result == TC_FAIL) { /* terminate test */
+//                 TC_ERROR("cavp_pkv failed.\n");
+//                 goto exitTest;
+//         }
+// 	TC_PRINT("Performing montecarlo_ecdh test:\n");
+// 	result = montecarlo_ecdh(10, verbose);
+//         if (result == TC_FAIL) { /* terminate test */
+//                 TC_ERROR("montecarlo_ecdh test failed.\n");
+//                 goto exitTest;
+//         }
+
+//         TC_PRINT("All EC-DH tests succeeded!\n");
+
+//  exitTest:
+//         TC_END_RESULT(result);
+//         TC_END_REPORT(result);
+// }

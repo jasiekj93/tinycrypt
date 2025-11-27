@@ -64,7 +64,7 @@ struct kat_table {
 /*
  * NIST test key schedule.
  */
-int test_1(void)
+static int test_1(void)
 {
 	int result = TC_PASS;
 	const uint8_t nist_key[NUM_OF_NIST_KEYS] = {
@@ -108,7 +108,7 @@ exitTest1:
 /*
  * NIST test vectors for encryption.
  */
-int test_2(void)
+static int test_2(void)
 {
 	int result = TC_PASS;
 	const uint8_t nist_key[NUM_OF_NIST_KEYS] = {
@@ -171,7 +171,7 @@ int var_text_test(unsigned int r, const uint8_t *in, const uint8_t *out,
 /*
  * All NIST tests with fixed key and variable text.
  */
-int test_3(void)
+static int test_3(void)
 {
 	int result = TC_PASS;
 	const uint8_t key[NUM_OF_NIST_KEYS] = {
@@ -1118,7 +1118,7 @@ int var_key_test(unsigned int r, const uint8_t *in, const uint8_t *out)
 /*
  * All NIST tests with variable key and fixed text.
  */
-int test_4(void)
+static int test_4(void)
 {
 	int result = TC_PASS;
 	const struct kat_table kat_tbl[NUM_OF_FIXED_KEYS] = {
@@ -2036,43 +2036,65 @@ int test_4(void)
 	return result;
 }
 
-/*
- * Main task to test AES
- */
-int main(void)
+#include <CppUTest/TestHarness_c.h>
+
+TEST_C(AesTest, test_1)
 {
-	int result = TC_PASS;
-
-	TC_START("Performing AES128 tests:");
-
-	result = test_1();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("AES128 test #1 (NIST key schedule test) failed.\n");
-		goto exitTest;
-	}
-	result = test_2();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("AES128 test #2 (NIST encryption test) failed.\n");
-		goto exitTest;
-	}
-	result = test_3();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("AES128 test #3 (NIST fixed-key and variable-text) "
-			 "failed.\n");
-		goto exitTest;
-	}
-	result = test_4();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("AES128 test #4 (NIST variable-key and fixed-text) "
-			 "failed.\n");
-		goto exitTest;
-	}
-
-	TC_PRINT("All AES128 tests succeeded!\n");
-
- exitTest:
-	TC_END_RESULT(result);
-	TC_END_REPORT(result);
-
-	return result;
+    CHECK_EQUAL_C_INT(TC_PASS, test_1());
 }
+
+TEST_C(AesTest, test_2)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_2());
+}
+
+TEST_C(AesTest, test_3)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_3());
+}
+
+TEST_C(AesTest, test_4)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_4());
+}
+
+// /*
+//  * Main task to test AES
+//  */
+// int main(void)
+// {
+// 	int result = TC_PASS;
+
+// 	TC_START("Performing AES128 tests:");
+
+// 	result = test_1();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("AES128 test #1 (NIST key schedule test) failed.\n");
+// 		goto exitTest;
+// 	}
+// 	result = test_2();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("AES128 test #2 (NIST encryption test) failed.\n");
+// 		goto exitTest;
+// 	}
+// 	result = test_3();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("AES128 test #3 (NIST fixed-key and variable-text) "
+// 			 "failed.\n");
+// 		goto exitTest;
+// 	}
+// 	result = test_4();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("AES128 test #4 (NIST variable-key and fixed-text) "
+// 			 "failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	TC_PRINT("All AES128 tests succeeded!\n");
+
+//  exitTest:
+// 	TC_END_RESULT(result);
+// 	TC_END_REPORT(result);
+
+// 	return result;
+// }

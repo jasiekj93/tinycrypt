@@ -113,26 +113,33 @@ unsigned int test_1_and_2(void)
         return result;
 }
 
+#include <CppUTest/TestHarness_c.h>
+
+TEST_C(CtrTest, test_1_and_2)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_1_and_2());
+}
+
 /*
  * Main task to test AES
  */
 
-int main(void)
-{
-        unsigned int result = TC_PASS;
+// int main(void)
+// {
+//         unsigned int result = TC_PASS;
 
-        TC_START("Performing AES128-CTR mode tests:");
+//         TC_START("Performing AES128-CTR mode tests:");
 
-        TC_PRINT("Performing CTR tests:\n");
-        result = test_1_and_2();
-        if (result == TC_FAIL) { /* terminate test */
-                TC_ERROR("CBC test #1 failed.\n");
-                goto exitTest;
-        }
+//         TC_PRINT("Performing CTR tests:\n");
+//         result = test_1_and_2();
+//         if (result == TC_FAIL) { /* terminate test */
+//                 TC_ERROR("CBC test #1 failed.\n");
+//                 goto exitTest;
+//         }
 
-        TC_PRINT("All CTR tests succeeded!\n");
+//         TC_PRINT("All CTR tests succeeded!\n");
 
- exitTest:
-        TC_END_RESULT(result);
-        TC_END_REPORT(result);
-}
+//  exitTest:
+//         TC_END_RESULT(result);
+//         TC_END_REPORT(result);
+// }

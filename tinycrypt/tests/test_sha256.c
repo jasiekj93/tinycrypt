@@ -50,7 +50,7 @@
 /*
  * NIST SHA256 test vector 1.
  */
-unsigned int test_1(void)
+static unsigned int test_1(void)
 {
         unsigned int result = TC_PASS;
 
@@ -76,7 +76,7 @@ unsigned int test_1(void)
 /*
  * NIST SHA256 test vector 2.
  */
-unsigned int test_2(void)
+static unsigned int test_2(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #2:\n");
@@ -99,7 +99,7 @@ unsigned int test_2(void)
         return result;
 }
 
-unsigned int test_3(void)
+static unsigned int test_3(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #3:\n");
@@ -122,7 +122,7 @@ unsigned int test_3(void)
         return result;
 }
 
-unsigned int test_4(void)
+static unsigned int test_4(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #4:\n");
@@ -145,7 +145,7 @@ unsigned int test_4(void)
         return result;
 }
 
-unsigned int test_5(void)
+static unsigned int test_5(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #5:\n");
@@ -171,7 +171,7 @@ unsigned int test_5(void)
         return result;
 }
 
-unsigned int test_6(void)
+static unsigned int test_6(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #6:\n");
@@ -196,7 +196,7 @@ unsigned int test_6(void)
         return result;
 }
 
-unsigned int test_7(void)
+static unsigned int test_7(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #7:\n");
@@ -221,7 +221,7 @@ unsigned int test_7(void)
         return result;
 }
 
-unsigned int test_8(void)
+static unsigned int test_8(void)
 {
         unsigned int result = TC_PASS;
 
@@ -247,7 +247,7 @@ unsigned int test_8(void)
         return result;
 }
 
-unsigned int test_9(void)
+static unsigned int test_9(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #9:\n");
@@ -272,7 +272,7 @@ unsigned int test_9(void)
         return result;
 }
 
-unsigned int test_10(void)
+static unsigned int test_10(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #10:\n");
@@ -297,7 +297,7 @@ unsigned int test_10(void)
         return result;
 }
 
-unsigned int test_11(void)
+static unsigned int test_11(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #11:\n");
@@ -322,7 +322,7 @@ unsigned int test_11(void)
         return result;
 }
 
-unsigned int test_12(void)
+static unsigned int test_12(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #12:\n");
@@ -351,7 +351,7 @@ unsigned int test_12(void)
         return result;
 }
 
-unsigned int test_13(void)
+static unsigned int test_13(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #13:\n");
@@ -379,7 +379,7 @@ unsigned int test_13(void)
         return result;
 }
 
-unsigned int test_14(void)
+static unsigned int test_14(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("SHA256 test #14:\n");
@@ -411,101 +411,173 @@ unsigned int test_14(void)
  * Main task to test AES
  */
 
-int main(void)
+#include <CppUTest/TestHarness_c.h>
+
+TEST_C(Sha256Test, test_1)
 {
-        unsigned int result = TC_PASS;
-        TC_START("Performing SHA256 tests (NIST tests vectors):");
-
-        result = test_1();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #1 failed.\n");
-                goto exitTest;
-        }
-        result = test_2();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #2 failed.\n");
-                goto exitTest;
-        }
-        result = test_3();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #3 failed.\n");
-                goto exitTest;
-        }
-        result = test_4();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #4 failed.\n");
-                goto exitTest;
-        }
-        result = test_5();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #5 failed.\n");
-                goto exitTest;
-        }
-        result = test_6();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #6 failed.\n");
-                goto exitTest;
-        }
-        result = test_7();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #7 failed.\n");
-                goto exitTest;
-        }
-        result = test_8();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #8 failed.\n");
-                goto exitTest;
-        }
-        result = test_9();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #9 failed.\n");
-                goto exitTest;
-        }
-        result = test_10();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #10 failed.\n");
-                goto exitTest;
-        }
-        result = test_11();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #11 failed.\n");
-                goto exitTest;
-        }
-        result = test_12();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #12 failed.\n");
-                goto exitTest;
-        }
-  	/* memory and computation intensive test cases: */
-        result = test_13();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #13 failed.\n");
-                goto exitTest;
-        }
-        result = test_14();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("SHA256 test #14 failed.\n");
-                goto exitTest;
-        }
-
-        TC_PRINT("All SHA256 tests succeeded!\n");
-
-exitTest:
-        TC_END_RESULT(result);
-        TC_END_REPORT(result);
+    CHECK_EQUAL_C_INT(TC_PASS, test_1());
 }
+
+TEST_C(Sha256Test, test_2)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_2());
+}
+
+TEST_C(Sha256Test, test_3)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_3());
+}
+
+TEST_C(Sha256Test, test_4)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_4());
+}
+
+TEST_C(Sha256Test, test_5)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_5());
+}
+
+TEST_C(Sha256Test, test_6)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_6());
+}
+
+TEST_C(Sha256Test, test_7)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_7());
+}
+
+TEST_C(Sha256Test, test_8)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_8());
+}
+
+TEST_C(Sha256Test, test_9)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_9());
+}
+
+TEST_C(Sha256Test, test_10)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_10());
+}
+
+TEST_C(Sha256Test, test_11)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_11());
+}
+
+TEST_C(Sha256Test, test_12)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_12());
+}
+
+TEST_C(Sha256Test, test_13)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_13());
+}
+
+TEST_C(Sha256Test, test_14)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_14());
+}
+
+// int main(void)
+// {
+//         unsigned int result = TC_PASS;
+//         TC_START("Performing SHA256 tests (NIST tests vectors):");
+
+//         result = test_1();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #1 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_2();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #2 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_3();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #3 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_4();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #4 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_5();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #5 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_6();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #6 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_7();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #7 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_8();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #8 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_9();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #9 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_10();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #10 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_11();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #11 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_12();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #12 failed.\n");
+//                 goto exitTest;
+//         }
+//   	/* memory and computation intensive test cases: */
+//         result = test_13();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #13 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_14();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("SHA256 test #14 failed.\n");
+//                 goto exitTest;
+//         }
+
+//         TC_PRINT("All SHA256 tests succeeded!\n");
+
+// exitTest:
+//         TC_END_RESULT(result);
+//         TC_END_REPORT(result);
+// }
 

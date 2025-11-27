@@ -101,7 +101,7 @@ const uint8_t ciphertext[80] = {
 /*
  * NIST SP 800-38a CBC Test for encryption and decryption.
  */
-int test_1_and_2(void)
+static int test_1_and_2(void)
 {
 	struct tc_aes_key_sched_struct a;
 	uint8_t iv_buffer[16];
@@ -149,28 +149,35 @@ exitTest1:
 	return result;
 }
 
+#include <CppUTest/TestHarness_c.h>
+
+TEST_C(CbcTest, test_1_and_2)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_1_and_2());
+}
+
 /*
  * Main task to test AES
  */
-int main(void)
-{
-	int result = TC_PASS;
+// int main(void)
+// {
+// 	int result = TC_PASS;
 
-	TC_START("Performing AES128 tests:");
+// 	TC_START("Performing AES128 tests:");
 
-	TC_PRINT("Performing CBC tests:\n");
-	result = test_1_and_2();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("CBC test #1 failed.\n");
-		goto exitTest;
-	}
+// 	TC_PRINT("Performing CBC tests:\n");
+// 	result = test_1_and_2();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("CBC test #1 failed.\n");
+// 		goto exitTest;
+// 	}
 
-	TC_PRINT("All CBC tests succeeded!\n");
+// 	TC_PRINT("All CBC tests succeeded!\n");
 
-exitTest:
-	TC_END_RESULT(result);
-	TC_END_REPORT(result);
+// exitTest:
+// 	TC_END_RESULT(result);
+// 	TC_END_REPORT(result);
 
-	return result;
-}
+// 	return result;
+// }

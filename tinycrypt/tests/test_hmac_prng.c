@@ -6576,859 +6576,1466 @@ unsigned int test_120(void)
 	return result;
 }
 
+#include <CppUTest/TestHarness_c.h>
+
+TEST_C(HmacPrngTest, test_1)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_1());
+}
+
+TEST_C(HmacPrngTest, test_2)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_2());
+}
+
+TEST_C(HmacPrngTest, test_3)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_3());
+}
+
+TEST_C(HmacPrngTest, test_4)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_4());
+}
+
+TEST_C(HmacPrngTest, test_5)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_5());
+}
+
+TEST_C(HmacPrngTest, test_6)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_6());
+}
+
+TEST_C(HmacPrngTest, test_7)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_7());
+}
+
+TEST_C(HmacPrngTest, test_8)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_8());
+}
+
+TEST_C(HmacPrngTest, test_9)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_9());
+}
+
+TEST_C(HmacPrngTest, test_10)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_10());
+}
+
+TEST_C(HmacPrngTest, test_11)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_11());
+}
+
+TEST_C(HmacPrngTest, test_12)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_12());
+}
+
+TEST_C(HmacPrngTest, test_13)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_13());
+}
+
+TEST_C(HmacPrngTest, test_14)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_14());
+}
+
+TEST_C(HmacPrngTest, test_15)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_15());
+}
+
+TEST_C(HmacPrngTest, test_16)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_16());
+}
+
+TEST_C(HmacPrngTest, test_17)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_17());
+}
+
+TEST_C(HmacPrngTest, test_18)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_18());
+}
+
+TEST_C(HmacPrngTest, test_19)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_19());
+}
+
+TEST_C(HmacPrngTest, test_20)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_20());
+}
+
+TEST_C(HmacPrngTest, test_21)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_21());
+}
+
+TEST_C(HmacPrngTest, test_22)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_22());
+}
+
+TEST_C(HmacPrngTest, test_23)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_23());
+}
+
+TEST_C(HmacPrngTest, test_24)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_24());
+}
+
+TEST_C(HmacPrngTest, test_25)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_25());
+}
+
+TEST_C(HmacPrngTest, test_26)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_26());
+}
+
+TEST_C(HmacPrngTest, test_27)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_27());
+}
+
+TEST_C(HmacPrngTest, test_28)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_28());
+}
+
+TEST_C(HmacPrngTest, test_29)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_29());
+}
+
+TEST_C(HmacPrngTest, test_30)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_30());
+}
+
+TEST_C(HmacPrngTest, test_31)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_31());
+}
+
+TEST_C(HmacPrngTest, test_32)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_32());
+}
+
+TEST_C(HmacPrngTest, test_33)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_33());
+}
+
+TEST_C(HmacPrngTest, test_34)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_34());
+}
+
+TEST_C(HmacPrngTest, test_35)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_35());
+}
+
+TEST_C(HmacPrngTest, test_36)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_36());
+}
+
+TEST_C(HmacPrngTest, test_37)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_37());
+}
+
+TEST_C(HmacPrngTest, test_38)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_38());
+}
+
+TEST_C(HmacPrngTest, test_39)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_39());
+}
+
+TEST_C(HmacPrngTest, test_40)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_40());
+}
+
+TEST_C(HmacPrngTest, test_41)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_41());
+}
+
+TEST_C(HmacPrngTest, test_42)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_42());
+}
+
+TEST_C(HmacPrngTest, test_43)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_43());
+}
+
+TEST_C(HmacPrngTest, test_44)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_44());
+}
+
+TEST_C(HmacPrngTest, test_45)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_45());
+}
+
+TEST_C(HmacPrngTest, test_46)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_46());
+}
+
+TEST_C(HmacPrngTest, test_47)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_47());
+}
+
+TEST_C(HmacPrngTest, test_48)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_48());
+}
+
+TEST_C(HmacPrngTest, test_49)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_49());
+}
+
+TEST_C(HmacPrngTest, test_50)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_50());
+}
+
+TEST_C(HmacPrngTest, test_51)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_51());
+}
+
+TEST_C(HmacPrngTest, test_52)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_52());
+}
+
+TEST_C(HmacPrngTest, test_53)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_53());
+}
+
+TEST_C(HmacPrngTest, test_54)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_54());
+}
+
+TEST_C(HmacPrngTest, test_55)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_55());
+}
+
+TEST_C(HmacPrngTest, test_56)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_56());
+}
+
+TEST_C(HmacPrngTest, test_57)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_57());
+}
+
+TEST_C(HmacPrngTest, test_58)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_58());
+}
+
+TEST_C(HmacPrngTest, test_59)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_59());
+}
+
+TEST_C(HmacPrngTest, test_60)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_60());
+}
+
+TEST_C(HmacPrngTest, test_61)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_61());
+}
+
+TEST_C(HmacPrngTest, test_62)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_62());
+}
+
+TEST_C(HmacPrngTest, test_63)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_63());
+}
+
+TEST_C(HmacPrngTest, test_64)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_64());
+}
+
+TEST_C(HmacPrngTest, test_65)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_65());
+}
+
+TEST_C(HmacPrngTest, test_66)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_66());
+}
+
+TEST_C(HmacPrngTest, test_67)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_67());
+}
+
+TEST_C(HmacPrngTest, test_68)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_68());
+}
+
+TEST_C(HmacPrngTest, test_69)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_69());
+}
+
+TEST_C(HmacPrngTest, test_70)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_70());
+}
+
+TEST_C(HmacPrngTest, test_71)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_71());
+}
+
+TEST_C(HmacPrngTest, test_72)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_72());
+}
+
+TEST_C(HmacPrngTest, test_73)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_73());
+}
+
+TEST_C(HmacPrngTest, test_74)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_74());
+}
+
+TEST_C(HmacPrngTest, test_75)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_75());
+}
+
+TEST_C(HmacPrngTest, test_76)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_76());
+}
+
+TEST_C(HmacPrngTest, test_77)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_77());
+}
+
+TEST_C(HmacPrngTest, test_78)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_78());
+}
+
+TEST_C(HmacPrngTest, test_79)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_79());
+}
+
+TEST_C(HmacPrngTest, test_80)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_80());
+}
+
+TEST_C(HmacPrngTest, test_81)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_81());
+}
+
+TEST_C(HmacPrngTest, test_82)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_82());
+}
+
+TEST_C(HmacPrngTest, test_83)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_83());
+}
+
+TEST_C(HmacPrngTest, test_84)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_84());
+}
+
+TEST_C(HmacPrngTest, test_85)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_85());
+}
+
+TEST_C(HmacPrngTest, test_86)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_86());
+}
+
+TEST_C(HmacPrngTest, test_87)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_87());
+}
+
+TEST_C(HmacPrngTest, test_88)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_88());
+}
+
+TEST_C(HmacPrngTest, test_89)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_89());
+}
+
+TEST_C(HmacPrngTest, test_90)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_90());
+}
+
+TEST_C(HmacPrngTest, test_91)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_91());
+}
+
+TEST_C(HmacPrngTest, test_92)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_92());
+}
+
+TEST_C(HmacPrngTest, test_93)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_93());
+}
+
+TEST_C(HmacPrngTest, test_94)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_94());
+}
+
+TEST_C(HmacPrngTest, test_95)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_95());
+}
+
+TEST_C(HmacPrngTest, test_96)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_96());
+}
+
+TEST_C(HmacPrngTest, test_97)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_97());
+}
+
+TEST_C(HmacPrngTest, test_98)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_98());
+}
+
+TEST_C(HmacPrngTest, test_99)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_99());
+}
+
+TEST_C(HmacPrngTest, test_100)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_100());
+}
+
+TEST_C(HmacPrngTest, test_101)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_101());
+}
+
+TEST_C(HmacPrngTest, test_102)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_102());
+}
+
+TEST_C(HmacPrngTest, test_103)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_103());
+}
+
+TEST_C(HmacPrngTest, test_104)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_104());
+}
+
+TEST_C(HmacPrngTest, test_105)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_105());
+}
+
+TEST_C(HmacPrngTest, test_106)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_106());
+}
+
+TEST_C(HmacPrngTest, test_107)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_107());
+}
+
+TEST_C(HmacPrngTest, test_108)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_108());
+}
+
+TEST_C(HmacPrngTest, test_109)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_109());
+}
+
+TEST_C(HmacPrngTest, test_110)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_110());
+}
+
+TEST_C(HmacPrngTest, test_111)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_111());
+}
+
+TEST_C(HmacPrngTest, test_112)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_112());
+}
+
+TEST_C(HmacPrngTest, test_113)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_113());
+}
+
+TEST_C(HmacPrngTest, test_114)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_114());
+}
+
+TEST_C(HmacPrngTest, test_115)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_115());
+}
+
+TEST_C(HmacPrngTest, test_116)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_116());
+}
+
+TEST_C(HmacPrngTest, test_117)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_117());
+}
+
+TEST_C(HmacPrngTest, test_118)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_118());
+}
+
+TEST_C(HmacPrngTest, test_119)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_119());
+}
+
+TEST_C(HmacPrngTest, test_120)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_120());
+}
+
+
+
+
+
+
 
 /*
  * Main task to test HMAC-PRNG
  */
-int main(void)
-{
-	unsigned int result = TC_PASS;
-
-	TC_START("Performing HMAC-PRNG tests:");
-
-	result = test_1();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_2();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_3();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_4();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_5();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_6();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_7();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_8();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_9();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_10();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_11();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_12();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_13();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_14();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_15();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_16();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_17();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_18();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_19();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_20();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_21();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_22();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_23();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_24();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_25();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_26();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_27();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_28();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_29();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_30();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_31();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_32();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_33();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_34();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_35();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_36();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_37();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_38();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_39();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_40();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_41();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_42();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_43();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_44();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_45();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_46();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_47();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_48();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_49();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_50();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_51();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_52();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_53();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_54();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_55();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_56();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_57();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_58();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_59();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_60();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_61();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_62();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_63();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_64();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_65();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_66();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_67();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_68();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_69();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_70();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_71();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_72();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_73();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_74();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_75();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_76();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_77();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_78();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_79();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_80();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_81();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_82();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_83();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_84();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_85();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_86();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_87();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_88();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_89();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_90();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_91();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_92();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_93();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_94();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_95();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_96();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_97();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_98();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_99();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_100();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_101();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_102();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_103();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_104();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_105();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_106();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_107();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_108();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_109();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_110();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_111();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_112();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_113();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_114();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_115();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_116();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_117();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_118();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_119();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	result = test_120();
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("HMAC test #{test_number} failed.\n");
-		goto exitTest;
-	}
-
-	TC_PRINT("All HMAC-PRNG tests succeeded!\n");
-
-exitTest:
-	TC_END_RESULT(result);
-	TC_END_REPORT(result);
-}
+// int main(void)
+// {
+// 	unsigned int result = TC_PASS;
+
+// 	TC_START("Performing HMAC-PRNG tests:");
+
+// 	result = test_1();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_2();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_3();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_4();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_5();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_6();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_7();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_8();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_9();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_10();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_11();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_12();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_13();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_14();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_15();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_16();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_17();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_18();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_19();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_20();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_21();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_22();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_23();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_24();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_25();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_26();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_27();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_28();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_29();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_30();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_31();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_32();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_33();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_34();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_35();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_36();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_37();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_38();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_39();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_40();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_41();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_42();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_43();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_44();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_45();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_46();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_47();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_48();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_49();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_50();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_51();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_52();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_53();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_54();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_55();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_56();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_57();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_58();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_59();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_60();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_61();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_62();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_63();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_64();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_65();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_66();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_67();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_68();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_69();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_70();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_71();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_72();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_73();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_74();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_75();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_76();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_77();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_78();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_79();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_80();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_81();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_82();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_83();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_84();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_85();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_86();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_87();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_88();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_89();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_90();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_91();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_92();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_93();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_94();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_95();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_96();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_97();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_98();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_99();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_100();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_101();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_102();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_103();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_104();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_105();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_106();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_107();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_108();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_109();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_110();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_111();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_112();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_113();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_114();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_115();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_116();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_117();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_118();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_119();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	result = test_120();
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("HMAC test #{test_number} failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	TC_PRINT("All HMAC-PRNG tests succeeded!\n");
+
+// exitTest:
+// 	TC_END_RESULT(result);
+// 	TC_END_REPORT(result);
+// }

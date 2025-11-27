@@ -252,63 +252,105 @@ static int verify_cmac_512_bit_msg(TCCmacState_t s)
  * effects:    returns 1 if all tests pass
  * exceptions: returns a negative value if some test fails
  */
-int main(void)
+
+#include <CppUTest/TestHarness_c.h>
+
+static struct tc_cmac_struct state;
+static struct tc_aes_key_sched_struct sched;
+
+static const uint8_t key[BUF_LEN] = {
+    0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6,
+    0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c
+};
+static uint8_t K1[BUF_LEN], K2[BUF_LEN];
+
+TEST_GROUP_C_SETUP(CmacTest)
 {
-
-	int result = TC_PASS;
-
-	struct tc_cmac_struct state;
-	struct tc_aes_key_sched_struct sched;
-
-	const uint8_t key[BUF_LEN] = {
-		0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6,
-		0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c
-	};
-	uint8_t K1[BUF_LEN], K2[BUF_LEN];
-
-	TC_START("Performing CMAC tests:");
-
-	(void) tc_cmac_setup(&state, key, &sched);
-	result = verify_gf_2_128_double(K1, K2, state);
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("CMAC test #1 (128 double) failed.\n");
-		goto exitTest;
-	}
-	(void) tc_cmac_setup(&state, key, &sched);
-	result = verify_cmac_null_msg(&state);
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("CMAC test #2 (null msg) failed.\n");
-		goto exitTest;
-	}
-	(void) tc_cmac_setup(&state, key, &sched);
-	result = verify_cmac_1_block_msg(&state);
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("CMAC test #3 (1 block msg)failed.\n");
-		goto exitTest;
-	}
-	(void) tc_cmac_setup(&state, key, &sched);
-	result = verify_cmac_320_bit_msg(&state);
-	if (result == TC_FAIL) { 
-		/* terminate test */
-		TC_ERROR("CMAC test #4 (320 bit msg) failed.\n");
-		goto exitTest;
-	}
-	(void) tc_cmac_setup(&state, key, &sched);
-	result = verify_cmac_512_bit_msg(&state);
-	if (result == TC_FAIL) {
-		/* terminate test */
-		TC_ERROR("CMAC test #5  (512 bit msg)failed.\n");
-		goto exitTest;
-	}
-
-	TC_PRINT("All CMAC tests succeeded!\n");
-
-exitTest:
-	TC_END_RESULT(result);
-	TC_END_REPORT(result);
-
-	return result;
+    (void) tc_cmac_setup(&state, key, &sched);
 }
+
+TEST_C(CmacTest, verify_gf_2_128_double)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, verify_gf_2_128_double(K1, K2, state));
+}
+
+TEST_C(CmacTest, verify_cmac_null_msg)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, verify_cmac_null_msg(&state));
+}
+
+TEST_C(CmacTest, verify_cmac_1_block_msg)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, verify_cmac_1_block_msg(&state));
+}
+
+TEST_C(CmacTest, verify_cmac_320_bit_msg)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, verify_cmac_320_bit_msg(&state));
+}
+
+TEST_C(CmacTest, verify_cmac_512_bit_msg)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, verify_cmac_512_bit_msg(&state));
+}
+
+// int main(void)
+// {
+
+// 	int result = TC_PASS;
+
+// 	struct tc_cmac_struct state;
+// 	struct tc_aes_key_sched_struct sched;
+
+// 	const uint8_t key[BUF_LEN] = {
+// 		0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6,
+// 		0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c
+// 	};
+// 	uint8_t K1[BUF_LEN], K2[BUF_LEN];
+
+// 	TC_START("Performing CMAC tests:");
+
+// 	(void) tc_cmac_setup(&state, key, &sched);
+// 	result = verify_gf_2_128_double(K1, K2, state);
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("CMAC test #1 (128 double) failed.\n");
+// 		goto exitTest;
+// 	}
+// 	(void) tc_cmac_setup(&state, key, &sched);
+// 	result = verify_cmac_null_msg(&state);
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("CMAC test #2 (null msg) failed.\n");
+// 		goto exitTest;
+// 	}
+// 	(void) tc_cmac_setup(&state, key, &sched);
+// 	result = verify_cmac_1_block_msg(&state);
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("CMAC test #3 (1 block msg)failed.\n");
+// 		goto exitTest;
+// 	}
+// 	(void) tc_cmac_setup(&state, key, &sched);
+// 	result = verify_cmac_320_bit_msg(&state);
+// 	if (result == TC_FAIL) { 
+// 		/* terminate test */
+// 		TC_ERROR("CMAC test #4 (320 bit msg) failed.\n");
+// 		goto exitTest;
+// 	}
+// 	(void) tc_cmac_setup(&state, key, &sched);
+// 	result = verify_cmac_512_bit_msg(&state);
+// 	if (result == TC_FAIL) {
+// 		/* terminate test */
+// 		TC_ERROR("CMAC test #5  (512 bit msg)failed.\n");
+// 		goto exitTest;
+// 	}
+
+// 	TC_PRINT("All CMAC tests succeeded!\n");
+
+// exitTest:
+// 	TC_END_RESULT(result);
+// 	TC_END_REPORT(result);
+
+// 	return result;
+// }

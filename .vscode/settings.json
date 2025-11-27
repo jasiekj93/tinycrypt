@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.tpp": "cpp",
+        "*.roff": "troff",
+        "constants.h": "c",
+        "cmac_mode.h": "c",
+        "testharness_c.h": "c",
+        "string.h": "c"
+    }
+}

@@ -529,37 +529,63 @@ static int test_robustness(void)
 	return result;
 }
 
+#include <CppUTest/TestHarness_c.h>
+
+TEST_C(CtrPrngTest, executePrngTestVectors)
+{
+    unsigned int i;
+
+    for (i = 0U; i < sizeof vectors / sizeof vectors[0]; i++)
+        CHECK_EQUAL_C_INT(TC_PASS, executePRNG_TestVector(vectors[i], i));
+}
+
+TEST_C(CtrPrngTest, testReseed)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_reseed());
+}
+
+TEST_C(CtrPrngTest, testUninstantiate)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_uninstantiate());
+}
+
+TEST_C(CtrPrngTest, testRobustness)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_robustness());
+}
+
+
 /*
  * Main task to test CTR PRNG
  */
-int main(void)
-{
-	int result = TC_PASS;
-	unsigned int i;
-	TC_START("Performing CTR-PRNG tests:");
-	for (i = 0U; i < sizeof vectors / sizeof vectors[0]; i++) {
-		result = executePRNG_TestVector(vectors[i], i);
-		if (TC_PASS != result) {
-			goto exitTest;
-		}
-	}
+// int main(void)
+// {
+// 	int result = TC_PASS;
+// 	unsigned int i;
+// 	TC_START("Performing CTR-PRNG tests:");
+// 	for (i = 0U; i < sizeof vectors / sizeof vectors[0]; i++) {
+// 		result = executePRNG_TestVector(vectors[i], i);
+// 		if (TC_PASS != result) {
+// 			goto exitTest;
+// 		}
+// 	}
 
-	if (TC_PASS != test_reseed()) {
-		goto exitTest;
-	}
+// 	if (TC_PASS != test_reseed()) {
+// 		goto exitTest;
+// 	}
 
-	if (TC_PASS != test_uninstantiate()) {
-		goto exitTest;
-	}
+// 	if (TC_PASS != test_uninstantiate()) {
+// 		goto exitTest;
+// 	}
 
-	if (TC_PASS != test_robustness()) {
-		goto exitTest;
-	}
+// 	if (TC_PASS != test_robustness()) {
+// 		goto exitTest;
+// 	}
 
-	TC_PRINT("All CTR PRNG tests succeeded!\n");
+// 	TC_PRINT("All CTR PRNG tests succeeded!\n");
 
-	exitTest:
-    	TC_END_RESULT(result);
-    	TC_END_REPORT(result);
+// 	exitTest:
+//     	TC_END_RESULT(result);
+//     	TC_END_REPORT(result);
 
-}
+// }

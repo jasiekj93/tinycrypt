@@ -581,16 +581,16 @@ int cavp_verify(bool verbose)
 
 	struct tc_sha256_state_struct sha256_ctx;
 
-	printf("Test #2: ECDSAvrfy ");
-	printf("NIST-p256, SHA2-256\n");
+	// printf("Test #2: ECDSAvrfy ");
+	// printf("NIST-p256, SHA2-256\n");
 
 	return vrfy_vectors(&sha256_ctx, Msg, Qx, Qy, R, S, Result, 15, verbose);
 }
 
 int montecarlo_signverify(int num_tests, bool verbose)
 {
-	printf("Test #3: Monte Carlo (%d Randomized EC-DSA signatures) ", num_tests);
-	printf("NIST-p256, SHA2-256\n  ");
+	// printf("Test #3: Monte Carlo (%d Randomized EC-DSA signatures) ", num_tests);
+	// printf("NIST-p256, SHA2-256\n  ");
 	int i;
 	uint8_t private[NUM_ECC_BYTES];
 	uint8_t public[2*NUM_ECC_BYTES];
@@ -632,38 +632,70 @@ int montecarlo_signverify(int num_tests, bool verbose)
 	return TC_PASS;
 }
 
-int main()
+#include <CppUTest/TestHarness_c.h>
+
+static bool isInitalized = false;
+static bool verbose = false;
+
+TEST_GROUP_C_SETUP(EccDsaTest)
 {
-	unsigned int result = TC_PASS;
+    if (!isInitalized) 
+    {
+        uECC_set_rng(&default_CSPRNG);
+        isInitalized = true;
+    }
+} 
 
-	TC_START("Performing ECC-DSA tests:");
-	/* Setup of the Cryptographically Secure PRNG. */
-	uECC_set_rng(&default_CSPRNG);
-
-	bool verbose = true;
-
-	TC_PRINT("Performing cavp_sign test:\n");
-	result = cavp_sign(verbose);
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("cavp_sign test failed.\n");
-		goto exitTest;
-	}
-	TC_PRINT("Performing cavp_verify test:\n");
-	result = cavp_verify(verbose);
-	if (result == TC_FAIL) {
-		TC_ERROR("cavp_verify test failed.\n");
-		goto exitTest;
-	}
-	TC_PRINT("Performing montecarlo_signverify test:\n");
-	result = montecarlo_signverify(10, verbose);
-	if (result == TC_FAIL) {
-		TC_ERROR("montecarlo_signverify test failed.\n");
-	goto exitTest;
-	}
-
-	TC_PRINT("\nAll ECC-DSA tests succeeded.\n");
-
- exitTest:
-        TC_END_RESULT(result);
-        TC_END_REPORT(result);
+TEST_C(EccDsaTest, cavp_sign)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, cavp_sign(verbose));
 }
+
+TEST_C(EccDsaTest, cavp_verify)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, cavp_verify(verbose));
+}
+
+TEST_C(EccDsaTest, montecarlo_signverify)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, montecarlo_signverify(10, verbose));
+}
+
+
+// int main()
+// {
+// 	unsigned int result = TC_PASS;
+
+// 	TC_START("Performing ECC-DSA tests:");
+// 	/* Setup of the Cryptographically Secure PRNG. */
+// 	uECC_set_rng(&default_CSPRNG);
+
+// 	bool verbose = true;
+
+// 	TC_PRINT("Performing cavp_sign test:\n");
+// 	result = cavp_sign(verbose);
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("cavp_sign test failed.\n");
+// 		goto exitTest;
+// 	}
+// 	TC_PRINT("Performing cavp_verify test:\n");
+// 	result = cavp_verify(verbose);
+// 	if (result == TC_FAIL) {
+// 		TC_ERROR("cavp_verify test failed.\n");
+// 		goto exitTest;
+// 	}
+// 	TC_PRINT("Performing montecarlo_signverify test:\n");
+// 	result = montecarlo_signverify(10, verbose);
+// 	if (result == TC_FAIL) {
+// 		TC_ERROR("montecarlo_signverify test failed.\n");
+// 	goto exitTest;
+// 	}
+
+// 	TC_PRINT("\nAll ECC-DSA tests succeeded.\n");
+
+//  exitTest:
+//         TC_END_RESULT(result);
+//         TC_END_REPORT(result);
+// }
+
+

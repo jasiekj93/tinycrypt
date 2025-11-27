@@ -485,61 +485,103 @@ exitTest1:
 	return result;
 }
 
+#include <CppUTest/TestHarness_c.h>
+
+TEST_C(CcmTest, test_vector_1)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_vector_1());
+}
+
+TEST_C(CcmTest, test_vector_2)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_vector_2());
+}
+
+TEST_C(CcmTest, test_vector_3)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_vector_3());
+}
+
+TEST_C(CcmTest, test_vector_4)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_vector_4());
+}
+
+TEST_C(CcmTest, test_vector_5)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_vector_5());
+}
+
+TEST_C(CcmTest, test_vector_6)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_vector_6());
+}
+
+TEST_C(CcmTest, test_vector_7)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_vector_7());
+}
+
+TEST_C(CcmTest, test_vector_8)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_vector_8());
+}
+
 /*
  * Main task to test CCM
  */
-int main(void)
-{
-	int result = TC_PASS;
+// int main(void)
+// {
+// 	int result = TC_PASS;
 
-	TC_START("Performing CCM tests:");
+// 	TC_START("Performing CCM tests:");
 
-	result = test_vector_1();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("CCM test #1 (RFC 3610 test vector #1) failed.\n");
-		goto exitTest;
-	}
-	result = test_vector_2();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("CCM test #2 failed.\n");
-		goto exitTest;
-	}
-	result = test_vector_3();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("CCM test #3 failed.\n");
-		goto exitTest;
-	}
-	result = test_vector_4();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("CCM test #4 failed.\n");
-		goto exitTest;
-	}
-	result = test_vector_5();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("CCM test #5 failed.\n");
-		goto exitTest;
-	}
-	result = test_vector_6();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("CCM test #6 failed.\n");
-		goto exitTest;
-	}
-	result = test_vector_7();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("CCM test #7 failed.\n");
-		goto exitTest;
-	}
-	result = test_vector_8();
-	if (result == TC_FAIL) { /* terminate test */
-		TC_ERROR("CCM test #8 (no payload data) failed.\n");
-		goto exitTest;
-	}
+// 	result = test_vector_1();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("CCM test #1 (RFC 3610 test vector #1) failed.\n");
+// 		goto exitTest;
+// 	}
+// 	result = test_vector_2();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("CCM test #2 failed.\n");
+// 		goto exitTest;
+// 	}
+// 	result = test_vector_3();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("CCM test #3 failed.\n");
+// 		goto exitTest;
+// 	}
+// 	result = test_vector_4();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("CCM test #4 failed.\n");
+// 		goto exitTest;
+// 	}
+// 	result = test_vector_5();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("CCM test #5 failed.\n");
+// 		goto exitTest;
+// 	}
+// 	result = test_vector_6();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("CCM test #6 failed.\n");
+// 		goto exitTest;
+// 	}
+// 	result = test_vector_7();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("CCM test #7 failed.\n");
+// 		goto exitTest;
+// 	}
+// 	result = test_vector_8();
+// 	if (result == TC_FAIL) { /* terminate test */
+// 		TC_ERROR("CCM test #8 (no payload data) failed.\n");
+// 		goto exitTest;
+// 	}
 
-	TC_PRINT("All CCM tests succeeded!\n");
+// 	TC_PRINT("All CCM tests succeeded!\n");
 
-exitTest:
-	TC_END_RESULT(result);
-	TC_END_REPORT(result);
+// exitTest:
+// 	TC_END_RESULT(result);
+// 	TC_END_REPORT(result);
 
-	return result;
-}
+// 	return result;
+// }

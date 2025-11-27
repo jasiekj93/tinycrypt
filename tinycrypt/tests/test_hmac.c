@@ -66,7 +66,7 @@ unsigned int do_hmac_test(TCHmacState_t h, unsigned int testnum, const uint8_t *
 /*
  * NIST test vectors for encryption.
  */
-unsigned int test_1(void)
+static unsigned int test_1(void)
 {
         unsigned int result = TC_PASS;
 
@@ -94,7 +94,7 @@ unsigned int test_1(void)
         return result;
 }
 
-unsigned int test_2(void)
+static unsigned int test_2(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("HMAC %s:\n", __func__);
@@ -122,7 +122,7 @@ unsigned int test_2(void)
         return result;
 }
 
-unsigned int test_3(void)
+static unsigned int test_3(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("HMAC %s:\n", __func__);
@@ -153,7 +153,7 @@ unsigned int test_3(void)
         return result;
 }
 
-unsigned int test_4(void)
+static unsigned int test_4(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("HMAC %s:\n", __func__);
@@ -186,7 +186,7 @@ unsigned int test_4(void)
         return result;
 }
 
-unsigned int test_5(void)
+static unsigned int test_5(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("HMAC %s:\n", __func__);
@@ -214,7 +214,7 @@ unsigned int test_5(void)
         return result;
 }
 
-unsigned int test_6(void)
+static unsigned int test_6(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("HMAC %s:\n", __func__);
@@ -254,7 +254,7 @@ unsigned int test_6(void)
         return result;
 }
 
-unsigned int test_7(void)
+static unsigned int test_7(void)
 {
         unsigned int result = TC_PASS;
         TC_PRINT("HMAC %s:\n", __func__);
@@ -302,61 +302,100 @@ unsigned int test_7(void)
         return result;
 }
 
+#include <CppUTest/TestHarness_c.h>
+
+TEST_C(HmacTest, test_1)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_1());
+}
+
+TEST_C(HmacTest, test_2)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_2());
+}
+
+TEST_C(HmacTest, test_3)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_3());
+}
+
+TEST_C(HmacTest, test_4)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_4());
+}
+
+TEST_C(HmacTest, test_5)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_5());
+}
+
+TEST_C(HmacTest, test_6)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_6());
+}
+
+TEST_C(HmacTest, test_7)
+{
+    CHECK_EQUAL_C_INT(TC_PASS, test_7());
+}
+
+
 /*
  * Main task to test AES
  */
-int main(void)
-{
-        unsigned int result = TC_PASS;
+// int main(void)
+// {
+//         unsigned int result = TC_PASS;
 
-        TC_START("Performing HMAC tests (RFC4231 test vectors):");
+//         TC_START("Performing HMAC tests (RFC4231 test vectors):");
 
-        result = test_1();
-        if (result == TC_FAIL) { 
-		/* terminate test */
-                TC_ERROR("HMAC test #1 failed.\n");
-                goto exitTest;
-        }
-        result = test_2();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("HMAC test #2 failed.\n");
-                goto exitTest;
-        }
-        result = test_3();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("HMAC test #3 failed.\n");
-                goto exitTest;
-        }
-        result = test_4();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("HMAC test #4 failed.\n");
-                goto exitTest;
-        }
-        result = test_5();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("HMAC test #5 failed.\n");
-                goto exitTest;
-        }
-        result = test_6();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("HMAC #6 test failed.\n");
-                goto exitTest;
-        }
-        result = test_7();
-        if (result == TC_FAIL) {
-		/* terminate test */
-                TC_ERROR("HMAC test #7 failed.\n");
-                goto exitTest;
-        }
+//         result = test_1();
+//         if (result == TC_FAIL) { 
+// 		/* terminate test */
+//                 TC_ERROR("HMAC test #1 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_2();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("HMAC test #2 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_3();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("HMAC test #3 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_4();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("HMAC test #4 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_5();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("HMAC test #5 failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_6();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("HMAC #6 test failed.\n");
+//                 goto exitTest;
+//         }
+//         result = test_7();
+//         if (result == TC_FAIL) {
+// 		/* terminate test */
+//                 TC_ERROR("HMAC test #7 failed.\n");
+//                 goto exitTest;
+//         }
 
-        TC_PRINT("All HMAC tests succeeded!\n");
+//         TC_PRINT("All HMAC tests succeeded!\n");
 
-exitTest:
-        TC_END_RESULT(result);
-        TC_END_REPORT(result);
-}
+// exitTest:
+//         TC_END_RESULT(result);
+//         TC_END_REPORT(result);
+// }
+
