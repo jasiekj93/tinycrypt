@@ -26,8 +26,7 @@ namespace tinycryptpp
 
         bool reseed(Seed, AdditionalInput = AdditionalInput());
 
-        bool generate(Output);
-        int generate(uint8_t* dest, unsigned int size) override;
+        bool generate(Output) override;
 
         template <class T>
         void generate(T& container)

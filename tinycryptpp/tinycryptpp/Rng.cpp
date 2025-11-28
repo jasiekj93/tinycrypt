@@ -31,7 +31,7 @@ void Rng::setGlobal()
 int Rng::wrapper(uint8_t* dest, unsigned int size)
 {
     if (globalInstance != nullptr)
-        return globalInstance->generate(dest, size);
+        return static_cast<int>(globalInstance->generate({ dest, size }));
     else
         return 0; 
 }

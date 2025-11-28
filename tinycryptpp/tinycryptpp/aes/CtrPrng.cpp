@@ -31,11 +31,7 @@ bool CtrPrng::generate(Output output, AdditionalInput additionalInput)
                                     static_cast<unsigned int>(output.size()));
 }
 
-int CtrPrng::generate(uint8_t* dest, unsigned int size)
+bool tinycryptpp::aes::CtrPrng::generate(Output out)
 {
-    return tc_ctr_prng_generate(&state, 
-                               nullptr,
-                               0,
-                               dest, 
-                               size);
+    return generate(out, AdditionalInput());
 }

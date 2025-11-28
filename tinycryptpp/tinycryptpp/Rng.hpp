@@ -8,22 +8,23 @@
 
 #include <cstdint>
 
+#include <etl/span.h>
+
 #include <tinycrypt/ecc.h>
 
 namespace tinycryptpp
 {
     class Rng
     {
-    private:
-       
-
     public:
+        using Output = etl::span<uint8_t>;
+    
         Rng();
         virtual ~Rng();
 
         void setGlobal();
 
-        virtual int generate(uint8_t* dest, unsigned int size) = 0;
+        virtual bool generate(Output) = 0;
 
     private:
         static Rng* globalInstance;

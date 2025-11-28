@@ -25,8 +25,3 @@ bool HmacPrng::generate(Output output)
                                         static_cast<unsigned int>(output.size()), 
                                         &state);
 }
-
-int HmacPrng::generate(uint8_t* dest, unsigned int size)
-{
-    return tc_hmac_prng_generate(dest, size, &state);
-}
