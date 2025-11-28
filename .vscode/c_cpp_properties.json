@@ -5,9 +5,10 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/tinycrypt",
-                "${workspaceFolder}/external/CppUTest/include"
+                "${workspaceFolder}/external/CppUTest/include",
+                "${workspaceFolder}/external/etl/include"
             ],
-            "defines": [],
+            "defines": ["ETL_NO_PROFILE_HEADER"],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
             "intelliSenseMode": "linux-gcc-x64"
