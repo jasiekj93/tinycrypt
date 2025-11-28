@@ -20,6 +20,11 @@ namespace tinycryptpp
 
         Sha256();
 
+        /**
+         * @note Destructor clears the internal state to remove any sensitive data
+         */
+        ~Sha256();
+
         Sha256& update(etl::span<const uint8_t> data);
         Digest final();
         

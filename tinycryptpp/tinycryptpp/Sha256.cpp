@@ -7,7 +7,12 @@ Sha256::Sha256()
     tc_sha256_init(&state);
 }
 
-Sha256& Sha256::update(etl::span<const uint8_t> data)
+Sha256::~Sha256()
+{
+    etl::fill_n(reinterpret_cast<uint8_t*>(&state), sizeof(state), 0);
+}
+
+Sha256 &Sha256::update(etl::span<const uint8_t> data)
 {
     tc_sha256_update(&state, data.data(), data.size());
     return *this;
