@@ -1,3 +1,9 @@
+# TinyCryptPP
+
+This is a wrapper library, written in C++, that uses ETL containers for better compatibility in embedded systems.
+
+# Original README text: #
+
 # This project will no longer be maintained by Intel.  #
 Intel has ceased development and contributions including, but not limited to, maintenance, bug fixes, new releases, or updates, to this project.  
 Intel no longer accepts patches to this project.  
